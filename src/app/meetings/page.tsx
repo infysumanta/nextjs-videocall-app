@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import MyMeetingsPage from "./MyMeetingsPage";
+import MyMeetingsComponent from "@/components/meeting/my-meetting-components";
 
 export const metadata: Metadata = {
   title: "My Meetings",
 };
 
 export default function Page() {
-  return <MyMeetingsPage />;
+  return <MyMeetingsComponent />;
 }

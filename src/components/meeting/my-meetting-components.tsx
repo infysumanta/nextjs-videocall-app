@@ -6,7 +6,7 @@ import { Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function MyMeetingsPage() {
+export default function MyMeetingsComponent() {
   const { user } = useUser();
 
   const client = useStreamVideoClient();
@@ -42,7 +42,9 @@ export default function MyMeetingsPage() {
       {!calls && <Loader2 className="mx-auto animate-spin" />}
       {calls?.length === 0 && <p>No meetings found</p>}
       <ul className="list-inside list-disc space-y-2">
-        {calls?.map((call) => <MeetingItem key={call.id} call={call} />)}
+        {calls?.map((call) => (
+          <MeetingItem key={call.id} call={call} />
+        ))}
       </ul>
     </div>
   );
