@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import EndCallButton from "./end-call-button";
+import EndCallButton from "../ui/end-call-button";
 
 type CallLayout = "speaker-vert" | "speaker-horiz" | "grid";
 
